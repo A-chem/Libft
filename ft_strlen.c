@@ -6,7 +6,7 @@
 /*   By: achemlal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 17:42:04 by achemlal          #+#    #+#             */
-/*   Updated: 2024/10/25 20:40:25 by achemlal         ###   ########.fr       */
+/*   Updated: 2024/10/29 22:48:45 by achemlal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *str)
 	size_t	a;
 
 	a = 0;
-	while (str[a] != '\0')
+	while (str[a])
 	{
 		a++;
 	}

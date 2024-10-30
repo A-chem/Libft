@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achemlal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 18:17:19 by achemlal          #+#    #+#             */
-/*   Updated: 2024/10/29 14:13:12 by achemlal         ###   ########.fr       */
+/*   Created: 2024/10/30 12:23:20 by achemlal          #+#    #+#             */
+/*   Updated: 2024/10/30 12:26:22 by achemlal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_putendl_fd(char *str, int fd)
 {
-	while (n > 0)
+	int	i;
+
+	i = 0;
+	while (str[i])
 	{
-		if (*(const unsigned char *) s1 != *(const unsigned char *) s2)
-			return (*(const unsigned char *) s1 - *(const unsigned char *) s2);
-		s1 = (const unsigned char *) s1 + 1;
-		s2 = (const unsigned char *) s2 +1;
-		n--;
+		write(fd, &str[i], 1);
+		i++;
 	}
-	return (0);
+	write(fd, "\n", 1);
 }

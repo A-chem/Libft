@@ -6,7 +6,7 @@
 /*   By: achemlal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:05:34 by achemlal          #+#    #+#             */
-/*   Updated: 2024/10/26 13:43:23 by achemlal         ###   ########.fr       */
+/*   Updated: 2024/10/30 19:58:32 by achemlal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t destsize)
 		dest[len_dest + i] = src[i];
 		i++;
 	}
+	dest[len_dest + i] = '\0';
 	return (len_dest + len_src);
 }
