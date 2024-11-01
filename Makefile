@@ -6,11 +6,11 @@
 #    By: achemlal <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 13:18:21 by achemlal          #+#    #+#              #
-#    Updated: 2024/10/30 17:58:23 by achemlal         ###   ########.fr        #
+#    Updated: 2024/10/31 15:33:28 by achemlal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_isascii.c ft_memcpy.c ft_split.c ft_strlcpy.c ft_strtrim.c \
