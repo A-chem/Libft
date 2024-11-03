@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achemlal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 10:12:48 by achemlal          #+#    #+#             */
-/*   Updated: 2024/11/02 16:36:12 by achemlal         ###   ########.fr       */
+/*   Created: 2024/11/03 17:46:38 by achemlal          #+#    #+#             */
+/*   Updated: 2024/11/03 17:56:49 by achemlal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-int main ()
+
+t_list	*ft_lstnew(void *content)
 {
-	char tab  ;
-	ft_memset(&tab, 65, 1);
+	t_list	*new_node;
 
-	printf("%c\n", tab);
-	int str = 0;
-	
-	ft_memset((char *)&str, 57, 1);
-
-
-
-	printf("%d",str);
-	return 0;
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node -> content = content;
+	new_node -> next = NULL;
+	return (new_node);
 }

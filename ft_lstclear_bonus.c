@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achemlal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 10:12:48 by achemlal          #+#    #+#             */
-/*   Updated: 2024/11/02 16:36:12 by achemlal         ###   ########.fr       */
+/*   Created: 2024/11/03 17:53:21 by achemlal          #+#    #+#             */
+/*   Updated: 2024/11/03 20:33:30 by achemlal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-int main ()
+
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	char tab  ;
-	ft_memset(&tab, 65, 1);
+	t_list	*ptr;
 
-	printf("%c\n", tab);
-	int str = 0;
-	
-	ft_memset((char *)&str, 57, 1);
-
-
-
-	printf("%d",str);
-	return 0;
+	while (*lst)
+	{
+		ptr = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = ptr;
+	}
+	*lst = NULL;
 }

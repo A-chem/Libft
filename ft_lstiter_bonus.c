@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achemlal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 10:12:48 by achemlal          #+#    #+#             */
-/*   Updated: 2024/11/02 16:36:12 by achemlal         ###   ########.fr       */
+/*   Created: 2024/11/03 17:54:37 by achemlal          #+#    #+#             */
+/*   Updated: 2024/11/03 18:27:26 by achemlal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-int main ()
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	char tab  ;
-	ft_memset(&tab, 65, 1);
+	t_list	*ptr;
 
-	printf("%c\n", tab);
-	int str = 0;
-	
-	ft_memset((char *)&str, 57, 1);
-
-
-
-	printf("%d",str);
-	return 0;
+	ptr = lst;
+	while (ptr)
+	{
+		f(ptr -> content);
+		ptr = ptr -> next;
+	}
 }

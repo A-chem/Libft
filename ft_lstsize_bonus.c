@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: achemlal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 10:12:48 by achemlal          #+#    #+#             */
-/*   Updated: 2024/11/02 16:36:12 by achemlal         ###   ########.fr       */
+/*   Created: 2024/11/03 17:49:14 by achemlal          #+#    #+#             */
+/*   Updated: 2024/11/03 17:59:16 by achemlal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-int main ()
+
+int	ft_lstsize(t_list *lst)
 {
-	char tab  ;
-	ft_memset(&tab, 65, 1);
+	int	len_lst;
 
-	printf("%c\n", tab);
-	int str = 0;
-	
-	ft_memset((char *)&str, 57, 1);
-
-
-
-	printf("%d",str);
-	return 0;
+	len_lst = 0;
+	while (lst)
+	{
+		lst = lst -> next;
+		len_lst++;
+	}
+	return (len_lst);
 }
