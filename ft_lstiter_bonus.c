@@ -6,7 +6,7 @@
 /*   By: achemlal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 17:54:37 by achemlal          #+#    #+#             */
-/*   Updated: 2024/11/03 18:27:26 by achemlal         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:09:41 by achemlal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*ptr;
 
+	if (!lst || !f)
+		return ;
 	ptr = lst;
 	while (ptr)
 	{

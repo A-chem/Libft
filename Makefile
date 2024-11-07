@@ -6,9 +6,11 @@
 #    By: achemlal <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 13:18:21 by achemlal          #+#    #+#              #
-#    Updated: 2024/11/03 19:34:16 by achemlal         ###   ########.fr        #
+#    Updated: 2024/11/07 18:57:50 by achemlal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+NAME = libft.a
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -28,17 +30,13 @@ OBJ = $(SRC:.c=.o)
 
 BONUS_OBJ = $(BONUS_SRC:.c=.o)	
 
-NAME = libft.a
-
-.PHONY: all clean fclean re
-
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
 	@echo "Library $(NAME) created."
 
-%.o: %.c libft.h
+%.o: %.c libft.h 
 	@$(CC) $(CFLAGS) -c $< -o $@
 	@echo "Compiled $<"
 
@@ -46,7 +44,7 @@ bonus: $(OBJ) $(BONUS_OBJ)
 	@ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 	@echo "Library $(NAME) with bonus created."
 
-clean:
+clean :
 	@rm -f $(OBJ) $(BONUS_OBJ)
 
 
@@ -58,3 +56,4 @@ fclean: clean
 # Rebuild the library
 re: fclean all
 
+.PHONY:  clean 

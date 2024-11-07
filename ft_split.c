@@ -6,7 +6,7 @@
 /*   By: achemlal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 22:11:06 by achemlal          #+#    #+#             */
-/*   Updated: 2024/10/31 15:23:34 by achemlal         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:37:14 by achemlal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ static int	split_words(char **split, const char *s, char c)
 		}
 		i++;
 	}
-	split[j] = NULL;
+	split[j] = NULL ;
 	return (1);
 }
 

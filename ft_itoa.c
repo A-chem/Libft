@@ -31,9 +31,7 @@ static void	fill_number(char *ptr, size_t len, long num)
 {
 	ptr[len--] = '\0';
 	if (num == 0)
-	{
 		ptr[0] = '0';
-	}
 	if (num < 0)
 	{
 		ptr[0] = '-';

@@ -34,6 +34,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	while (s2[i])
 		ptr[j++] = s2[i++];
-	ptr[j] = 0;
+	ptr[j] = '\0';
 	return (ptr);
 }
