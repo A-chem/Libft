@@ -3,34 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: achemlal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 14:33:33 by achemlal          #+#    #+#             */
-/*   Updated: 2024/11/07 12:34:26 by achemlal         ###   ########.fr       */
+/*   Updated: 2024/11/14 22:45:17 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
-# include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 int		ft_isalpha(int c);
-int		ft_isdigit(int a);
-int		ft_isalnum(int a);
-int		ft_isascii(int a);
-int		ft_isprint(int a);
-size_t	ft_strlen(const char *str);
-void	*ft_memset(void *ptr, int val, size_t num);
-void	ft_bzero(void *ptr, size_t num);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+size_t	ft_strlen(const char *s);
+void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *s, size_t n);
 
-void	*ft_memcpy(void *dest, const void *src, size_t num);
-void	*ft_memmove(void *dest, const void *src, size_t num);
-size_t	ft_strlcpy(char *dest, const char *src, size_t num);
-size_t	ft_strlcat(char *dest, const char *src, size_t destsize);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);

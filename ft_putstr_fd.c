@@ -6,7 +6,7 @@
 /*   By: achemlal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:20:17 by achemlal          #+#    #+#             */
-/*   Updated: 2024/11/07 11:56:46 by achemlal         ###   ########.fr       */
+/*   Updated: 2024/11/11 14:48:51 by achemlal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s)
+		return ;
 	if (fd < 0)
 		return ;
 	i = 0;
